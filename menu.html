@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - BrewZone</title>
+</head>
+<body class="bg-menu">
+
+<div id="loader"><div class="loader-box">Loading...</div></div>
+
+<div class="navbar">
+  <div class="logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" width="25" alt="Logo">
+    BrewZone
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="menu.html" class="active">Menu</a>
+    <a href="about.html">About</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="glass menu-container-glass">
+
+    <div class="menu-header-premium">
+      <div class="dropdown-container">
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+          <span id="current-category">All Menu</span> ▼
+        </button>
+        <div class="dropdown-list" id="cat-dropdown">
+          <p class="cat-item active" onclick="filterMenu('all', 'All Menu', this)">All Menu</p>
+          <p class="cat-item" onclick="filterMenu('coffee', 'Coffee', this)">Coffee</p>
+          <p class="cat-item" onclick="filterMenu('noncoffee', 'Non Coffee', this)">Non Coffee</p>
+          <p class="cat-item" onclick="filterMenu('food', 'Food', this)">Food</p>
+        </div>
+      </div>
+
+      <div class="search-premium">
+        <input type="text" id="search" placeholder="🔍 Cari menu...">
+      </div>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="card premium-card" data-category="coffee" onclick="openDetail(this)">
+        <div class="card-img">
+          <img src="images/kopi-1.jpg.jpeg" alt="Caramel Machiato">
+        </div>
+        <div class="card-info">
+          <h3>Caramel Machiato</h3>
+          <p class="price">Rp 25.000</p>
+          <p class="desc-hidden" style="display: none;">Paduan espresso premium dengan susu segar murni. Sangat cocok dinikmati di pagi hari untuk mengawali aktivitasmu dengan lembut.</p>
+        </div>
+      </div>
+
+      <div class="card premium-card" data-category="coffee" onclick="openDetail(this)">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1495474472204-518646c5abc4" alt="Iced Americano">
+        </div>
+        <div class="card-info">
+          <h3>Iced Americano</h3>
+          <p class="price">Rp 23.000</p>
+          <p class="desc-hidden" style="display: none;">Kopi hitam murni dari biji Arabica pilihan yang diekstraksi sempurna. Memberikan karakter rasa yang kuat dan aroma tajam untuk dorongan energi maksimal.</p>
+        </div>
+      </div>
+
+      <div class="card premium-card" data-category="noncoffee" onclick="openDetail(this)">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096" alt="Matcha">
+        </div>
+        <div class="card-info">
+          <h3>Dirty Matcha</h3>
+          <p class="price">Rp 31.000</p>
+          <p class="desc-hidden" style="display: none;">Kombinasi berani antara matcha otentik Jepang dan satu shot espresso. Menyatukan dua dunia untuk membangkitkan semangat harimu!</p>
+        </div>
+      </div>
+
+      <div class="card premium-card" data-category="food" onclick="openDetail(this)">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2" alt="Croissant">
+        </div>
+        <div class="card-info">
+          <h3>Butter Croissant</h3>
+          <p class="price">Rp 20.000</p>
+          <p class="desc-hidden" style="display: none;">Pastry klasik Prancis yang renyah di luar dan lembut di dalam. Sangat sempurna dipadukan dengan segelas Latte hangat atau Americano.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div id="popup" class="popup">
+  <div class="popup-detail-glass">
+    <button class="close-btn" onclick="closePopup()">✖</button>
+    <div class="popup-content-split">
+      
+      <div class="popup-left">
+        <img id="popup-img" src="" alt="Product">
+      </div>
+      
+      <div class="popup-right">
+        <h2 id="popup-title">Nama Produk</h2>
+        <h3 id="popup-price" class="price-highlight">Rp 0</h3>
+        <p id="popup-desc">Deskripsi produk akan muncul di sini.</p>
+        <button type="button" class="btn-order-app" onclick="confirmOrder()">Order Now</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="toast-notification" class="toast-notification">
+    <div class="toast-content">
+        <span class="toast-icon">✔</span>
+        <div class="toast-text">
+            <h4>Sukses!</h4>
+            <p id="toast-message">Minuman berhasil dipesan.</p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

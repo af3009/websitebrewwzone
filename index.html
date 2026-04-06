@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="bg-home">
+
+<div id="loader"><div class="loader-box">Loading...</div></div>
+
+<div class="navbar">
+  <div class="logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" width="25">
+    BrewZone
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+  </div>
+</div>
+
+<div class="container home-container">
+  
+  <div class="glass hero">
+    <h1>Modern Coffee Experience</h1>
+    <p>It's Never Just Coffe</p>
+    
+    <div class="premium-slider-container">
+      
+      <div class="premium-slider" id="slider">
+        <div class="slide">
+          <img src="images/home-3.jpg.jpeg" alt="BrewZone Location 1">
+        </div>
+        <div class="slide">
+          <img src="images/home-1.jpg.jpeg" alt="BrewZone Location 2">
+        </div>
+        <div class="slide">
+          <img src="images/home-2.jpg.jpeg" alt="BrewZone Location 3">
+        </div>
+         <div class="slide">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200" alt="BrewZone Location 4">
+        </div>
+        <div class="slide">
+          <img src="images/home-2.jpg.jpeg" alt="BrewZone Location 5">
+        </div>
+      </div>
+
+      <button class="slider-btn prev-btn" onclick="moveSlide(-1)">❮</button>
+      <button class="slider-btn next-btn" onclick="moveSlide(1)">❯</button>
+    </div>
+
+  </div>
+
+  <div class="glass section-glass">
+  <div class="section-header">
+      <h2>— Our Story</h2>
+      <div class="story-nav-buttons">
+        <button class="slider-btn next-btn" onclick="moveStorySlide(1)">❯</button>
+      </div>
+    </div>
+    
+    <div class="story-slider">
+      
+      <div class="story-card premium-card">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24" alt="Store">
+        <h3>Perjalanan Kami</h3>
+        <p>Berawal dari tugas kelompok, BrewZone kini berevolusi menjadi konsep kedai kopi modern yang mengutamakan kualitas biji lokal.</p>
+        
+        <div class="desc-hidden" style="display: none;">
+          Berawal dari sebuah tugas kelompok merancang identitas visual, BrewZone kini berevolusi menjadi konsep kedai kopi modern yang nyata. Kami percaya bahwa desain dan rasa harus berjalan beriringan. Kami membangun BrewZone bukan sekadar sebagai tempat nongkrong, tapi juga ruang kreatif untuk berbagi inspirasi.
+        </div>
+        
+        <a href="javascript:void(0)" class="see-more" onclick="openStoryDetail(this.parentElement)">See more ➔</a>
+      </div>
+
+      <div class="story-card premium-card">
+        <img src="images/ourstory-2.jpg.jpeg" alt="Beans">
+        <h3>Biji Kopi Pilihan</h3>
+        <p>Kami bekerja sama dengan petani lokal untuk memastikan setiap cangkir yang disajikan memiliki standar premium.</p>
+        
+        <div class="desc-hidden" style="display: none;">
+          Kami bekerja sama langsung dengan petani lokal dari berbagai penjuru Nusantara untuk memastikan setiap cangkir yang disajikan memiliki standar premium. Proses roasting (pemanggangan) dilakukan secara teliti untuk mengeluarkan profil rasa dan aroma terbaik dari setiap biji kopi.
+        </div>
+        
+        <a href="javascript:void(0)" class="see-more" onclick="openStoryDetail(this.parentElement)">See more ➔</a>
+      </div>
+
+      <div class="story-card premium-card">
+        <img src="images/home-4.jpg.jpeg" alt="Barista">
+        <h3>Seni Menyeduh</h3>
+        <p>Kenali para barista kami yang mendedikasikan hidupnya untuk meracik espresso dengan sempurna.</p>
+        
+        <div class="desc-hidden" style="display: none;">
+          Bagi kami, meracik kopi bukan sekadar menuangkan air panas. Menyeduh kopi adalah sebuah seni visual dan teknik yang membutuhkan presisi, gairah, serta ketelitian tingkat tinggi. Para barista kami dilatih untuk mengekstraksi espresso secara sempurna agar konsisten setiap harinya.
+        </div>
+        
+        <a href="javascript:void(0)" class="see-more" onclick="openStoryDetail(this.parentElement)">See more ➔</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="glass section-glass">
+    <div class="section-header text-center">
+      <h2>Meet Our Team</h2>
+      <p style="color: #b0b3b8;">Founding Members</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="images/meetteam-1.jpg.jpeg" alt="Foto Anggota" class="team-img">
+        <h4>Ahmad Fachri M.</h4>
+        <p>Project Manager</p>
+      </div>
+      <div class="team-member">
+        <img src="images/meetteam-2.jpg.jpeg" alt="Foto Anggota" class="team-img">
+        <h4>Albertus Lino</h4>
+        <p>Lead Designer</p>
+      </div>
+      <div class="team-member">
+        <img src="images/meettam-3.jpg.jpeg" alt="Foto Anggota" class="team-img">
+        <h4>Hanafi Putro Anggoro</h4>
+        <p>Web Developer</p>
+      </div>
+      <div class="team-member">
+        <img src="images/meatteam-4.jpg.jpeg" alt="Foto Anggota" class="team-img">
+        <h4>Nabilah Intan Permata Rohy</h4>
+        <p>Copywriter</p>
+      </div>
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200" alt="Foto Anggota" class="team-img">
+        <h4>Nama Anggota 5</h4>
+        <p>Marketing</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div id="popup-story" class="popup">
+  <div class="popup-detail-glass">
+    <button class="close-btn" onclick="closeStoryPopup()">✖</button>
+    <div class="popup-content-split">
+      
+      <div class="popup-left">
+        <img id="popup-story-img" src="" alt="Story Detail">
+      </div>
+      
+      <div class="popup-right">
+        <h2 id="popup-story-title">Judul Story</h2>
+        <p id="popup-story-desc">Deskripsi detail panjang akan muncul di sini.</p>
+        <br>
+        <button class="btn-order-app" onclick="closeStoryPopup()">Kembali</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<footer class="glass-footer">
+  <div class="footer-content">
+    
+    <div class="footer-text">
+      <h3>BrewZone Coffee</h3>
+      <p>Nikmati kopi dengan vibes premium setiap hari. <br> Jl. Perguruan Cikini No. 123, Menteng, Jakarta Pusat.</p>
+    </div>
+    
+    <div class="footer-social">
+      <a href="#" target="_blank" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+      <a href="#" target="_blank" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="X Twitter"></a>
+      <a href="https://instagram.com/instagram" target="_blank" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="Instagram"></a>
+      <a href="#" target="_blank" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="LinkedIn"></a>
+    </div>
+
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2026 BrewZone. All rights reserved &bull; Terms and Conditions &bull; Privacy Policy</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/6281234567890" target="_blank" class="floating-wa">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="WhatsApp">
+</a>
+</body>
+</html>
