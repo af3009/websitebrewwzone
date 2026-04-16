@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+body {
+  color: white;
+  background-color: #1a1a1a;
+  /* --- 3 SERANGKAI BIAR BACKGROUND ANTENG --- */
+  background-size: cover; /* Biar gambar ditarik nutupin full layar */
+  background-position: center; /* Biar fokus gambar selalu di tengah */
+  background-attachment: fixed; /* INI KUNCINYA BIAR GAK GESER PAS DI-SCROLL */
+}
+
 
 .navbar {
   position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 85%;
