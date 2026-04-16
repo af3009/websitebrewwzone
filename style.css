@@ -447,12 +447,7 @@ p {
 }
 
 body {
-  background: var(--bg-cream) !important;
-  color: var(--text-dark);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  line-height: 1.6;
-  overflow-x: hidden;
-  /* Bikin scroll di HP licin */
+
   -webkit-overflow-scrolling: touch; 
 }
 
