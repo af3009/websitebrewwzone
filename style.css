@@ -5,15 +5,6 @@
   box-sizing: border-box;
 }
 
-body {
-  color: white;
-  background-color: #1a1a1a;
-  /* --- 3 SERANGKAI BIAR BACKGROUND ANTENG --- */
-  background-size: cover; /* Biar gambar ditarik nutupin full layar */
-  background-position: center; /* Biar fokus gambar selalu di tengah */
-  background-attachment: fixed; /* INI KUNCINYA BIAR GAK GESER PAS DI-SCROLL */
-}
-
 
 .navbar {
   position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 85%;
@@ -432,15 +423,43 @@ p {
 /* 1. Import Font High-End (Cormorant Garamond & Inter) */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@300;400;600&display=swap');
 
-/* 2. BACKGROUND BARU: PHAMILY CREAM + HINT STARBUCKS GREEN */
-/* Kita hapus gambar aslinya, ganti pakai gradien warna smooth */
+/* ========================================= */
+/* 🏆 BACKGROUND & KACA PREMIUM (HP & LAPTOP SAMA) */
+/* ========================================= */
+
+/* 1. PAKSA BACKGROUND JADI SAMA DI SEMUA LAYAR */
+/* Kombinasi Deep Starbucks Green & Roasted Coffee Brown */
 body, body.bg-home {
+  background: linear-gradient(135deg, #1C251F 0%, #111814 50%, #2A1F1D 100%) !important;
+  background-attachment: fixed !important; /* Biar diem pas di-scroll */
+  background-size: cover !important;
+  min-height: 100vh;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-attachment: fixed !important;
-  /* Racikan gradien cream & subtle green agar efek glasses tetep kelihatan modern */
-  background: linear-gradient(135deg, #FBF8F3 0%, #CCD6CC 100%) !important;
+  color: #FBF8F3; /* Bikin teks jadi warna cream biar kontras dan kebaca jelas */
+}
+
+/* 2. UPGRADE EFEK KACA BIAR NGGAK MENYATU (STANDAR APPLE/AWWWARDS) */
+.glass, .popup-detail-glass, .navbar {
+  /* Warna dasar kaca putih tapi sangat transparan */
+  background: rgba(255, 255, 255, 0.05) !important; 
+  
+  /* Efek blur yang kuat */
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important; /* WAJIB BUAT IPHONE/SAFARI DI HP */
+  
+  /* Garis pinggir tipis seolah-olah pinggiran kaca asli (ini kuncinya biar gak menyatu) */
+  border: 1px solid rgba(255, 255, 255, 0.15) !important; 
+  
+  /* Bayangan pekat di bawah kaca biar seolah melayang jauh dari background */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important;
+  
+  /* Biar teks di dalam kaca tetap putih/cream elegan */
+  color: #FBF8F3 !important;
+}
+
+/* Memastikan teks yang dulunya abu-abu jadi lebih terang di background gelap */
+p, .team-member p, .footer-text p {
+  color: rgba(251, 248, 243, 0.8) !important;
 }
 
 
