@@ -429,41 +429,37 @@ p {
 }
 
 /* ========================================= */
-/* 🏆 UNIFIED PREMIUM FONT (TOTAL CONSISTENCY) */
+/* 🏆 KOMBINASI FONT FINAL (LAPTOP & HP SAMA) */
 /* ========================================= */
 
-/* 1. Import Font (Cormorant untuk kesan mewah, Inter untuk kesan bersih) */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@300;400;600&display=swap');
+/* 1. Import Font: Cormorant (Buat Judul), Plus Jakarta Sans (Buat Isi) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap');
 
-/* 2. ATURAN JUDUL (SAMA SEMUA: h1 sampai h4 & tag strong) */
-/* Ini supaya "Meet Our Team" dan "Nama Anggota" seirama */
-h1, h2, h3, h4, strong, .logo strong {
+/* 2. ATURAN JUDUL (SERIF MEWAH ALA HP) */
+/* Tanpa @media, jadi berlaku di HP maupun Laptop */
+h1, h2, h3, h4, strong, .logo strong, .section-header h2 {
   font-family: 'Cormorant Garamond', serif !important;
-  font-style: italic; /* Ciri khas web pemenang penghargaan */
+  font-style: italic !important; /* Gaya miring berkelas */
   font-weight: 600 !important;
   text-transform: none !important;
   letter-spacing: -0.5px;
   line-height: 1.2;
 }
 
-/* 3. ATURAN TEKS BIASA (SAMA SEMUA: p, a, button, footer) */
-body, p, a, span, .footer-text p, .desc-hidden {
-  font-family: 'Inter', sans-serif !important;
-  font-weight: 300;
+/* 3. ATURAN ISI TEKS (CLEAN MODERN ALA LAPTOP) */
+/* Tanpa @media, jadi berlaku di HP maupun Laptop */
+body, p, a, span, .desc-hidden, .team-member p, .footer-text p {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 400;
   letter-spacing: 0.2px;
   line-height: 1.6;
 }
 
-/* 4. PERBAIKAN KHUSUS TEAM GRID (Biar gak mencar) */
+/* 4. PERBAIKAN KHUSUS TEAM GRID */
 .team-member h4 {
-  font-size: 1.4rem; /* Ukuran nama anggota */
+  font-size: 1.4rem;
   margin-top: 15px;
   margin-bottom: 5px;
-}
-
-.team-member p {
-  font-size: 0.9rem; /* Ukuran jabatan */
-  opacity: 0.8;
 }
 
 /* 5. ANIMASI REVEAL (Bolak-balik Smooth) */
