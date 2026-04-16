@@ -427,3 +427,81 @@ p {
   opacity: 0; /* Sembunyikan dulu */
   animation-delay: 0.15s; /* Telat 0.15 detik dari judul biar makin estetik */
 }
+
+/* ========================================= */
+/* ANIMASI & FONT ALA LANDO NORRIS           */
+/* ========================================= */
+
+/* Terapkan font bersih (Inter) ke teks biasa */
+body, p, a, .desc-hidden {
+  font-family: 'Inter', 'Plus Jakarta Sans', sans-serif !important;
+}
+
+/* Terapkan font tebal & sporty (Archivo Black) ke semua Judul */
+h1, h2, h3, h4, strong, .logo {
+  font-family: 'Archivo Black', sans-serif !important;
+  letter-spacing: 1px; /* Jarak antar huruf dilebarin dikit biar mewah */
+  text-transform: uppercase; /* Huruf besar semua biar tegas */
+}
+
+/* Custom Animasi "Lando Slide" Super Smooth */
+[data-aos="lando-slide-up"] {
+  opacity: 0;
+  transform: translateY(60px); /* Melayang dari kedalaman 60px */
+  transition-property: transform, opacity;
+}
+
+[data-aos="lando-slide-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+  /* INI KUNCINYA: Kurva kecepatan! Cepat di awal, ngeluncur sangat lamban di akhir */
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important; 
+}
+
+/* ========================================= */
+/* 🏆 WORLD CLASS REVEAL: PHAMILY VIBES      */
+/* ========================================= */
+
+/* 1. Import Font High-End */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@300;400;600&display=swap');
+
+/* Typography ala Website Terbaik Dunia */
+h1, h2, h3, .logo strong {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-style: italic; /* Rahasia kesan artistik di web Phamily */
+  font-weight: 600 !important;
+  text-transform: none !important; /* Jangan uppercase semua biar elegan */
+  letter-spacing: -0.5px;
+}
+
+body, p, a, h4 {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+
+/* 2. CUSTOM REVEAL ANIMATION (EFEK KELUAR DARI MASKING) */
+[data-aos="phamily-reveal"] {
+  opacity: 0;
+  transform: translateY(100%); /* Mulai dari bawah banget */
+  clip-path: inset(0 0 100% 0); /* Rahasia: Teks seolah terpotong di bawah */
+  transition-property: transform, opacity, clip-path;
+}
+
+[data-aos="phamily-reveal"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+  clip-path: inset(0 0 0 0); /* Terbuka sempurna */
+  /* Kurva "Expo" yang dipake website kelas atas */
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1) !important; 
+}
+
+/* 3. HOVER EFFECT PREMIUM PADA KARTU GLASS */
+.glass {
+  transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.8s !important;
+}
+
+.glass:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
