@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home - BrewZone</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-home">
 
@@ -31,10 +33,10 @@
 <div class="container home-container">
   
   <div class="glass hero">
-    <h2>Modern Coffee Experience</h2>
-    <p>It's Never Just Coffe</p>
+    <h2 data-aos="lando-slide-up" data-aos-duration="1200">Modern Coffee Experience</h2>
+    <p data-aos="lando-slide-up" data-aos-delay="150" data-aos-duration="1200">It's Never Just Coffee</p>
     
-    <div class="premium-slider-container">
+    <div class="premium-slider-container" data-aos="lando-slide-up" data-aos-delay="300" data-aos-duration="1200">
       
       <div class="premium-slider" id="slider">
         <div class="slide">
@@ -62,7 +64,7 @@
 
   <div class="glass section-glass">
   <div class="section-header">
-      <h2 data-aos="fade-down" data-aos-duration="1000">— Our Story</h2>
+      <h2 data-aos="lando-slide-up" data-aos-duration="1200">— Our Story</h2>
       <div class="story-nav-buttons">
         <button class="slider-btn next-btn" onclick="moveStorySlide(1)">❯</button>
       </div>
@@ -70,10 +72,10 @@
     
     <div class="story-slider">
       
-      <div class="story-card premium-card">
+      <div class="story-card premium-card" data-aos="lando-slide-up" data-aos-duration="1200">
         <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24" alt="Store">
-        <h3 data-aos="fade-down" data-aos-duration="1000">Perjalanan Kami</h3>
-        <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Berawal dari tugas kelompok, BrewZone kini berevolusi menjadi konsep kedai kopi modern yang mengutamakan kualitas biji lokal.</p>
+        <h3 style="margin-top: 15px;">Perjalanan Kami</h3>
+        <p>Berawal dari tugas kelompok, BrewZone kini berevolusi menjadi konsep kedai kopi modern yang mengutamakan kualitas biji lokal.</p>
         
         <div class="desc-hidden" style="display: none;">
           Berawal dari sebuah tugas kelompok merancang identitas visual, BrewZone kini berevolusi menjadi konsep kedai kopi modern yang nyata. Kami percaya bahwa desain dan rasa harus berjalan beriringan. Kami membangun BrewZone bukan sekadar sebagai tempat nongkrong, tapi juga ruang kreatif untuk berbagi inspirasi.
@@ -82,10 +84,10 @@
         <a href="javascript:void(0)" class="see-more" onclick="openStoryDetail(this.parentElement)">See more ➔</a>
       </div>
 
-      <div class="story-card premium-card" data-aos="zoom-in-up" data-aos-duration="800">
+      <div class="story-card premium-card" data-aos="lando-slide-up" data-aos-delay="150" data-aos-duration="1200">
         <img src="images/ourstory-2.jpg.jpeg" alt="Beans">
-        <h3 data-aos="fade-down" data-aos-duration="1000">Biji Kopi Pilihan</h3>
-        <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Kami bekerja sama dengan petani lokal untuk memastikan setiap cangkir yang disajikan memiliki standar premium.</p>
+        <h3 style="margin-top: 15px;">Biji Kopi Pilihan</h3>
+        <p>Kami bekerja sama dengan petani lokal untuk memastikan setiap cangkir yang disajikan memiliki standar premium.</p>
         
         <div class="desc-hidden" style="display: none;">
           Kami bekerja sama langsung dengan petani lokal dari berbagai penjuru Nusantara untuk memastikan setiap cangkir yang disajikan memiliki standar premium. Proses roasting (pemanggangan) dilakukan secara teliti untuk mengeluarkan profil rasa dan aroma terbaik dari setiap biji kopi.
@@ -94,10 +96,10 @@
         <a href="javascript:void(0)" class="see-more" onclick="openStoryDetail(this.parentElement)">See more ➔</a>
       </div>
 
-      <div class="story-card premium-card" data-aos="zoom-in-up" data-aos-duration="800">
+      <div class="story-card premium-card" data-aos="lando-slide-up" data-aos-delay="300" data-aos-duration="1200">
         <img src="images/home-6.jpg.jpeg" alt="Barista">
-        <h3 data-aos="fade-down" data-aos-duration="1000">Seni Menyeduh</h3>
-        <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Kenali para barista kami yang mendedikasikan hidupnya untuk meracik espresso dengan sempurna.</p>
+        <h3 style="margin-top: 15px;">Seni Menyeduh</h3>
+        <p>Kenali para barista kami yang mendedikasikan hidupnya untuk meracik espresso dengan sempurna.</p>
         
         <div class="desc-hidden" style="display: none;">
           Bagi kami, meracik kopi bukan sekadar menuangkan air panas. Menyeduh kopi adalah sebuah seni visual dan teknik yang membutuhkan presisi, gairah, serta ketelitian tingkat tinggi. Para barista kami dilatih untuk mengekstraksi espresso secara sempurna agar konsisten setiap harinya.
@@ -110,33 +112,33 @@
   </div>
 
   <div class="glass section-glass">
-    <div class="section-header text-center">
-      <strong>Meet Our Team</strong>
+    <div class="section-header text-center" data-aos="lando-slide-up" data-aos-duration="1200">
+      <strong style="font-size: 2rem; display: block;">Meet Our Team</strong>
       <p style="color: #b0b3b8;">Founding Members</p>
     </div>
 
     <div class="team-grid">
-      <div class="team-member">
+      <div class="team-member" data-aos="lando-slide-up" data-aos-delay="0" data-aos-duration="1000">
         <img src="images/meatteam-6.jpg.jpeg" alt="Foto Anggota" class="team-img">
         <h4>Ahmad Fachri M.</h4>
         <p>Project Manager</p>
       </div>
-      <div class="team-member">
+      <div class="team-member" data-aos="lando-slide-up" data-aos-delay="100" data-aos-duration="1000">
         <img src="images/meatteam-7.jpg.jpeg" alt="Foto Anggota" class="team-img">
         <h4>Albertus Lino</h4>
         <p>Lead Designer</p>
       </div>
-      <div class="team-member">
+      <div class="team-member" data-aos="lando-slide-up" data-aos-delay="200" data-aos-duration="1000">
         <img src="images/meettam-3.jpg.jpeg" alt="Foto Anggota" class="team-img">
         <h4>Hanafi Putro Anggoro</h4>
         <p>Web Developer</p>
       </div>
-      <div class="team-member">
+      <div class="team-member" data-aos="lando-slide-up" data-aos-delay="300" data-aos-duration="1000">
         <img src="images/meatteam-4.jpg.jpeg" alt="Foto Anggota" class="team-img">
         <h4>Nabilah Intan Permata Rohy</h4>
         <p>Copywriter</p>
       </div>
-      <div class="team-member">
+      <div class="team-member" data-aos="lando-slide-up" data-aos-delay="400" data-aos-duration="1000">
         <img src="images/meatteam-5.jpg.jpeg" alt="Foto Anggota" class="team-img">
         <h4>Reyhan Ramadhan</h4>
         <p>Marketing</p>
@@ -195,8 +197,8 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 1000, /* Durasi animasi 1 detik biar mulus */
     once: true, /* Animasinya cuma jalan sekali pas di-scroll ke bawah */
+    offset: 50, /* Biar animasinya terpicu lebih awal */
   });
 </script>
 </body>
