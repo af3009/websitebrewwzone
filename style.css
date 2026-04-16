@@ -457,51 +457,40 @@ h1, h2, h3, h4, strong, .logo {
   /* INI KUNCINYA: Kurva kecepatan! Cepat di awal, ngeluncur sangat lamban di akhir */
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important; 
 }
-
 /* ========================================= */
-/* 🏆 WORLD CLASS REVEAL: PHAMILY VIBES      */
+/* 🏆 GLOBAL PREMIUM: LAPTOP & HP SAMA       */
 /* ========================================= */
 
 /* 1. Import Font High-End */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@300;400;600&display=swap');
 
-/* Typography ala Website Terbaik Dunia */
+/* 2. Terapkan Font Premium ke Semua Elemen (Tanpa Terkecuali) */
 h1, h2, h3, .logo strong {
   font-family: 'Cormorant Garamond', serif !important;
-  font-style: italic; /* Rahasia kesan artistik di web Phamily */
+  font-style: italic;
   font-weight: 600 !important;
-  text-transform: none !important; /* Jangan uppercase semua biar elegan */
+  text-transform: none !important;
   letter-spacing: -0.5px;
 }
 
-body, p, a, h4 {
+body, p, a, h4, .desc-hidden {
   font-family: 'Inter', sans-serif !important;
   font-weight: 300;
   letter-spacing: 0.2px;
 }
 
-/* 2. CUSTOM REVEAL ANIMATION (EFEK KELUAR DARI MASKING) */
+/* 3. Animasi Reveal (Keluar dari Masking) */
 [data-aos="phamily-reveal"] {
   opacity: 0;
-  transform: translateY(100%); /* Mulai dari bawah banget */
-  clip-path: inset(0 0 100% 0); /* Rahasia: Teks seolah terpotong di bawah */
+  transform: translateY(100%);
+  clip-path: inset(0 0 100% 0);
   transition-property: transform, opacity, clip-path;
 }
 
 [data-aos="phamily-reveal"].aos-animate {
   opacity: 1;
   transform: translateY(0);
-  clip-path: inset(0 0 0 0); /* Terbuka sempurna */
-  /* Kurva "Expo" yang dipake website kelas atas */
+  clip-path: inset(0 0 0 0);
+  /* Kurva "Expo" biar smooth-nya level dunia */
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1) !important; 
-}
-
-/* 3. HOVER EFFECT PREMIUM PADA KARTU GLASS */
-.glass {
-  transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.8s !important;
-}
-
-.glass:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }

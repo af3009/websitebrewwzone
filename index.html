@@ -203,8 +203,9 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 1000, 
-    once: true, 
+    duration: 1200, /* Sedikit lebih lambat biar lebih anggun */
+    once: false,    /* WAJIB: Biar animasi nggak cuma jalan sekali */
+    mirror: true,   /* WAJIB: Biar pas scroll ke atas, efeknya muncul lagi */
     offset: 50,
   });
 </script>
