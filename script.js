@@ -4,6 +4,14 @@ window.onload = () => {
   if (loader) loader.style.display = "none";
 };
 
+// ==========================================
+// HAMBURGER MENU NAVBAR (HP)
+// ==========================================
+function toggleNav() {
+  const navMenu = document.getElementById("nav-menu");
+  navMenu.classList.toggle("active");
+}
+
 // DROPDOWN MENU
 function toggleDropdown() {
   let dropdown = document.getElementById("cat-dropdown");
