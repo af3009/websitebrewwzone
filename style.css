@@ -379,16 +379,9 @@ body {
     padding: 12px;
     width: 100%;
     margin-bottom: 5px;
-    border-radius: 12px; /* Biar pas disentuh sudutnya membulat estetik */
+    border-radius: 12px; 
   }
 
-  /* ======================================= */
-  /* FIX BUG: Hapus blok warna di menu aktif */
-  /* ======================================= */
-  /* ======================================= */
-  /* EFEK BERKELAS: MUNCUL DARI BAWAH KE ATAS */
-  /* ======================================= */
-  
   /* Class saat menu aktif (diklik) */
   .navbar .nav-links.active {
     display: flex;
@@ -407,3 +400,26 @@ body {
       transform: translateY(0) scale(1); /* Berhenti di posisi normal */
     }
   }
+
+/* EFEK TEKS MUNCUL MELAYANG (PAGE LOAD)     */
+@keyframes textFadeUpGlass {
+  0% {
+    opacity: 0;
+    transform: translateY(35px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+h1, h2, h3, p {
+  /* Durasi 0.7 detik, pakai cubic-bezier biar ada efek membal (bouncy) yang elegan */
+  animation: textFadeUpGlass 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
+}
+
+/* (Staggered Effect) */
+p {
+  opacity: 0; /* Sembunyikan dulu */
+  animation-delay: 0.15s; /* Telat 0.15 detik dari judul biar makin estetik */
+}
