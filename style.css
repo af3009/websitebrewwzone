@@ -443,14 +443,6 @@ body, body.bg-home {
   background: linear-gradient(135deg, #FBF8F3 0%, #CCD6CC 100%) !important;
 }
 
-/* 3. PERBAIKAN FONT GLOBAL (LAPTOP & HP SAMA-SAMA PREMIUM) */
-h1, h2, h3, h4, strong, .logo strong, .section-header h2, .section-header strong {
-  font-family: 'Cormorant Garamond', serif !important;
-  font-style: italic !important;
-  font-weight: 600 !important;
-  text-transform: none !important;
-  letter-spacing: -0.5px;
-  line-height: 1.2;
 }
 
 body, p, a, span, .footer-text p, .desc-hidden, button, .slider-btn, footer p {
