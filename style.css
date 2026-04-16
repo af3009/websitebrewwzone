@@ -348,42 +348,62 @@ body {
     display: block; 
   }
 
-  /* Sembunyikan jejeran menu, ubah jadi mode kotak melayang */
+  /* KOTAK MENU DROPDOWN (DIUBAH JADI TERANG & BENING) */
   .navbar .nav-links {
-    display: none; /* Sembunyi secara default */
+    display: none; 
     position: absolute;
-    top: 115%; /* Jarak dari navbar */
-    right: 15px; /* Nempel ke kanan */
+    top: 115%; 
+    right: 15px; 
     width: 200px;
     flex-direction: column;
     
-    /* Tema Kaca Gelap biar elegan */
-    background: rgba(10, 15, 20, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(212, 163, 115, 0.3); /* Border Emas tipis */
+    /* Tema Kaca Lebih Terang (Light Glassmorphism) */
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.4); 
     border-radius: 20px;
     padding: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   }
 
-  /* Class ini akan dipanggil oleh JavaScript saat tombol diklik */
+  /* Animasi turun saat ditekan */
   .navbar .nav-links.active {
     display: flex;
     animation: fadeInDown 0.3s ease forwards;
   }
 
-  /* Rapikan tombol menu di dalam kotak */
+  /* Rapikan jarak tiap tombol menu */
   .navbar .nav-links a {
     text-align: center;
     padding: 12px;
     width: 100%;
     margin-bottom: 5px;
+    border-radius: 12px; /* Biar pas disentuh sudutnya membulat estetik */
   }
 
-  /* Animasi mulus turun ke bawah */
-  @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-15px); }
-    to { opacity: 1; transform: translateY(0); }
+  /* ======================================= */
+  /* FIX BUG: Hapus blok warna di menu aktif */
+  /* ======================================= */
+  /* ======================================= */
+  /* EFEK BERKELAS: MUNCUL DARI BAWAH KE ATAS */
+  /* ======================================= */
+  
+  /* Class saat menu aktif (diklik) */
+  .navbar .nav-links.active {
+    display: flex;
+    /* Panggil animasi baru dengan efek pantulan yang smooth */
+    animation: fadeInUpGlass 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
   }
-}
+
+  /* Animasi melayang dari bawah ke atas + zoom dikit */
+  @keyframes fadeInUpGlass {
+    0% { 
+      opacity: 0; 
+      transform: translateY(25px) scale(0.95); /* Mulai dari bawah dan agak kecil */
+    }
+    100% { 
+      opacity: 1; 
+      transform: translateY(0) scale(1); /* Berhenti di posisi normal */
+    }
+  }
