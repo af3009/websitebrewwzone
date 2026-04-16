@@ -443,14 +443,6 @@ body, body.bg-home {
   background: linear-gradient(135deg, #FBF8F3 0%, #CCD6CC 100%) !important;
 }
 
-}
-
-body, p, a, span, .footer-text p, .desc-hidden, button, .slider-btn, footer p {
-  font-family: 'Inter', sans-serif !important;
-  font-weight: 300;
-  letter-spacing: 0.2px;
-  line-height: 1.6;
-}
 
 /* 4. PERBAIKAN KHUSUS TEAM GRID */
 .team-member h4 {
