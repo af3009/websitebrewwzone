@@ -8,6 +8,10 @@
 body {
   color: white;
   background-color: #1a1a1a;
+  /* --- 3 SERANGKAI BIAR BACKGROUND ANTENG --- */
+  background-size: cover; /* Biar gambar ditarik nutupin full layar */
+  background-position: center; /* Biar fokus gambar selalu di tengah */
+  background-attachment: fixed; /* INI KUNCINYA BIAR GAK GESER PAS DI-SCROLL */
 }
 
 .bg-home { background: url('images/back-1.jpg.jpeg') no-repeat center/cover fixed; }

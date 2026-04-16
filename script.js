@@ -1,9 +1,3 @@
-// LOADING
-window.onload = () => {
-  let loader = document.getElementById("loader");
-  if (loader) loader.style.display = "none";
-};
-
 // ==========================================
 // HAMBURGER MENU NAVBAR (HP)
 // ==========================================
