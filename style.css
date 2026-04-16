@@ -435,16 +435,7 @@ p {
 /* 1. Import Font: Cormorant (Buat Judul), Plus Jakarta Sans (Buat Isi) */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap');
 
-/* 2. ATURAN JUDUL (SERIF MEWAH ALA HP) */
-/* Tanpa @media, jadi berlaku di HP maupun Laptop */
-h1, h2, h3, h4, strong, .logo strong, .section-header h2 {
-  font-family: 'Cormorant Garamond', serif !important;
-  font-style: italic !important; /* Gaya miring berkelas */
-  font-weight: 600 !important;
-  text-transform: none !important;
-  letter-spacing: -0.5px;
-  line-height: 1.2;
-}
+
 
 /* 3. ATURAN ISI TEKS (CLEAN MODERN ALA LAPTOP) */
 /* Tanpa @media, jadi berlaku di HP maupun Laptop */
