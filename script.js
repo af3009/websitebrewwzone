@@ -149,3 +149,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startAutoSlide();
 });
+const slider = document.querySelector('.story-slider');
+const cards = document.querySelectorAll('.story-card');
+
+const handleAppleScroll = () => {
+  // Titik tengah layar slider
+  const center = slider.getBoundingClientRect().left + (slider.offsetWidth / 2);
+
+  cards.forEach((card) => {
+    const cardRect = card.getBoundingClientRect();
+    const cardCenter = cardRect.left + (cardRect.width / 2);
+    const distance = Math.abs(center - cardCenter);
+
+    // Threshold 150px biar perpindahannya smooth
+    if (distance < 150) {
+      card.classList.add('is-active');
+    } else {
+      card.classList.remove('is-active');
+    }
+  });
+};
+
+slider.addEventListener('scroll', handleAppleScroll);
+window.addEventListener('load', handleAppleScroll);
